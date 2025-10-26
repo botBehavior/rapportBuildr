@@ -27,7 +27,8 @@ export function middleware(request: NextRequest) {
   }
 
   const response = new NextResponse("Authentication required", { status: 401 });
-  response.headers.set("WWW-Authenticate", `Basic realm="${REALM}", charset="UTF-8"`);
+  response.headers.set("WWW-Authenticate", `Basic realm="${REALM}"`);
+  response.headers.set("Cache-Control", "no-store");
   return response;
 }
 
