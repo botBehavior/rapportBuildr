@@ -48,6 +48,7 @@ The Grok integration enforces a 45-second timeout per request; make sure your up
 - Deploy the `frontend` directory as the Vercel project root.
 - Ensure `GROK_API_KEY`, `GROK_API_BASE_URL`, `GROK_API_PATH`, `GROK_MODEL`, `OSM_USER_AGENT`, and `CACHE_TTL_SECONDS` are configured in Vercel project settings.
 - Leave `NEXT_PUBLIC_BACKEND_URL` unset unless you split API/UI across different hosts.
+- The root-level `vercel.json` installs and builds from the `frontend/` subdirectory and exposes the `.next` output to Vercel. Keep it aligned if you rename folders or tweak build steps.
 
 ## Context Pillars
 - **State identity** – how locals describe statewide pride and culture.
